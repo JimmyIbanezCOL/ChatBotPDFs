@@ -26,7 +26,7 @@ def build_chatbot():
     
     chatbot_id = str(uuid.uuid4()) # Crear un chatbot_id unico
     chatbot_status[chatbot_id] = {'status': 'Creating embeddings'} # Agregar el chatbot_id a la estructura de chatbot_status
-    create_embeddings(file.filename)
+    create_embeddings(chatbot_id, file.filename)
 
     chatbot_status[chatbot_id] = {'status': 'Embeddings ready'} # Actualizar el status del chatbot_id
     #devolver el chatbot_id
